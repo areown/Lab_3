@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dice Roller</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h1 class="page-title">YOUR NEXT ROLL</h1>
+    <div class="die" [attr.data-face]="x()" role="img" [attr.aria-label]="'Die showing ' + x()">
+      <span class="pip pip-top-left"></span>
+      <span class="pip pip-top-right"></span>
+      <span class="pip pip-middle-left"></span>
+      <span class="pip pip-center"></span>
+      <span class="pip pip-middle-right"></span>
+      <span class="pip pip-bottom-left"></span>
+      <span class="pip pip-bottom-right"></span>
+    </div>
+    <p class="roll-result">You rolled <strong>{{ x() }}</strong></p>
+    <button class="roll-button" type="button" (click)="test()">
+      Roll the dice
+    </button>
+    <p class="hint">Or give your device a shake</p>
+  </div>
+</ion-content>
